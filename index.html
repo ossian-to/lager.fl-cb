@@ -15,7 +15,7 @@
   <meta property="og:image" content="assets/images/fb-1200x640.jpg"><!--圖檔路徑需改成絕對路徑-->
   <meta property="og:site_name" content="童話世界：去你的童話世界，讓我們再次玩他個天翻地覆。">
 
-  <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/all.css?v=6">
 </head>
 <body>
   <div class="ossian">
@@ -34,27 +34,71 @@
       <dd class="obj-item-6"><img src="assets/images/obj-6.png" alt=""></dd>
       <!-- <dd class="ojb-item-7"><img src="assets/images/light.png" alt=""></dd> -->
     </dl>
+    <ul class="share-links">
+      <li><a href="" target="_blank">搖滾火箭</a></li>
+      <li><a href="" target="_blank">FB 粉絲團</a></li>
+    </ul>
   </section>
   <!-- KV主視覺結束......................................... -->
 
 
-  <div class="p-1">
+  <div class="p-5181">
 
+    <!-- CB 封測區塊......................................... -->
+    <section class="event-1 wood">
+      <figure>
+        <img src="assets/images/sub-title-4.png" alt="CB封測">
+      </figure>
+      <div class="white-board bg">
+        <ul class="cb-download">
+          <li>
+            <a href="" title="CB 封測 (安卓)" id="paper-flower-btn">
+              <img src="assets/images/download-google-play.png" alt="CB 封測 (安卓)">
+            </a>
+          </li>
+          <li>
+            <a href="" title="CB 封測 (iOS)" id="paper-flower-btn-2">
+              <img src="assets/images/download-apple-store.png" alt="CB 封測 (iOS)">
+            </a>
+          </li>
+        </ul>
+        <div class="cb-note-zone">
+          <div class="cb-note">
+            <figure class="cb-note-title">
+              <img src="assets/images/sub-title-6.png" alt="CB 封測說明">
+            </figure>
+            <ol>
+              <li>CB 不限量刪檔封測時間：<em>2023/03/01 16:00 ~ 2023/03/10 13:59</em>。</li>
+              <li>CB 為刪檔測試，結束後，不保留任何資料。</li>
+              <li>
+                凡於封測結束前，達到 XXX 關卡或 40 級，將可於遊戲內信箱獲得「<em>秘境入場卷*10、100 魔幣</em>」兌換序號
+                <ul>
+                  <li>本序號限制單一帳號僅可兌換一次。</li>
+                  <li>該序號請玩家自行妥善保管，如遺失將不會補發。</li>
+                </ul>
+              </li>
+              <li>如有發生任何 BUG 相關事項，可至巴哈姆特哈拉區<em>童話世界 Fairyland World</em>，進行回報。</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CB 封測區塊結束..................................... -->
 
-    <!-- app 下載........................................... -->
-    <section class="app-download">
+    <!-- 預先註冊............................................ -->
+    <section class="app-download pt-2">
       <div class="pb-6">
         <ul class="app-download-banner">
-          <li><a href=""><img src="assets/images/apple-store.png" alt="apple store"></a></li>
           <li><a href=""><img src="assets/images/google-play.png" alt="google play"></a></li>
-          <li><a href="#now">
+          <li><a href=""><img src="assets/images/apple-store.png" alt="apple store"></a></li>
+          <!-- <li><a href="#now">
             <div class="eye"><img src="assets/images/eye.gif"></div>
             <img src="assets/images/pre-registration.png" alt="事前登入預約中 Pre-Registration">
-          </a></li>
+          </a></li> -->
         </ul>
       </div>
     </section>
-    <!-- app 下載結束........................................ -->
+    <!-- 預先註冊結束......................................... -->
 
 
     <!-- 預約活動區塊........................................ -->
@@ -158,14 +202,35 @@
                 <option value="南非 +27">南非 +27</option>
                 <option value="肯亞 +254">肯亞 +254</option>
               </select>
-              <input type="text" required="required" maxlength="12" pattern="09\d{8}||9\d{8}||09\d{2}-\d{3}-\d{3}||09\d{2}-\d{6}" placeholder="輸入手機號碼">
-              <button>預約</button>
+
+              <!-- 
+                由於無法確認各國電話號碼的長度及格式，目前這個欄位只需檢查三點：
+                1. 只能填寫 0-9 的數字
+                2. 數字最短 6 位數，最長 12 位數
+                3. 該欄位必填
+               -->
+
+              <input type="text" pattern="[0-9]{6,12}" maxlength="12" required="required" placeholder="輸入手機號碼">
+
               <!--
-                使用者按下預約的按鈕時，需要檢查是否有勾選同意會員條款及隱私權政策
+                使用者按下預約的按鈕時，
+                需要檢查是否有勾選下面同意會員條款及隱私權政策的 checkbox，
+                預設是勾選。
               -->
+
+              <button>預約</button>
             </form>
           </div>
-          <label for="say-yes"><input type="checkbox" form="booking-form" id="say-yes" required="required" checked> 我已閱讀並同意《<a href="" target="_blank">會員服務條款</a>》及《<a href="" target="_blank">隱私權政策</a>》</label>
+          <label for="say-yes" class="i-agree">
+            <input type="checkbox" form="booking-form" id="say-yes" required="required" checked> 
+
+            <!-- 
+              * 會員服務條款：連到搖滾火箭外聯的會員服務條款頁。
+              * 隱私權政策：連到搖滾火箭外聯的隱私權政策頁。
+             -->
+
+            我已閱讀並同意《<a href="" target="_blank">會員服務條款</a>》及《<a href="" target="_blank">隱私權政策</a>》
+          </label>
         </div>
       </div>
     </section>
@@ -188,7 +253,7 @@
 
 
     <!-- 事前預約獎勵........................................ -->
-    <section class="gift-group wood">
+    <section class="gift-group wood bg-2">
       <figure><img src="assets/images/sub-title-3.png" alt="事前預約特典：事前預約獎勵"></figure>
       <ul class="awards white-board">
         <li class="awards-item end">
@@ -294,22 +359,70 @@
     <!-- footer end......................................... -->
 
 
-    <!-- 右側懸浮 ICON....................................... -->
-    <dl class="fixed-icons">
-      <dd>
-        <a href="">
-          <figure><img src="assets/images/rock.png" alt="搖滾火箭"></figure>
-        </a>
-      </dd>
-      <dd>
-        <a href="">
-          <figure><img src="assets/images/fb.png" alt="FACEBOOK"></figure>
-        </a>
-      </dd>
-    </dl>
-    <!-- 右側懸浮 ICON 結束................................... -->
-
   
   </div>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.42.4/tsparticles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@1.42.4/tsparticles.preset.confetti.min.js"></script>
+<script>
+  loadConfettiPreset(tsParticles);
+
+  let confettiContainer;
+
+  const paperFlowerBtn = document.getElementById("paper-flower-btn");
+  const paperFlowerBtn2 = document.getElementById("paper-flower-btn-2");
+
+  tsParticles.load("tsparticles", {
+    particles: {
+      shape: {
+        type: "character",
+        character: {
+          value: ["▲", "★", "◆"]
+        },
+      },
+      color: {
+        value: ["#ff7200", "#00ff00", "#fffc00", "#00ccff"], 
+      }
+    },
+    preset: "confetti",
+    emitters: []
+  })
+    .then((container) => (confettiContainer = container));
+
+  paperFlowerBtn.addEventListener("mouseover", () => {
+    confettiContainer.addEmitter({
+      size: { // 噴發的範圍，越小越集中，越大越發散
+        width: 25,
+        height: 15
+      },
+      startCount: 2, // 起始數量
+      rate: {
+        delay: 0,
+        quantity: 10 // 粒子組數量，startCount 為一組
+      },
+      life: {
+        duration: 0.1, // 噴發的時間長度
+        count: 7 // 發射器的數量
+      }
+    });
+  });
+  paperFlowerBtn2.addEventListener("mouseover", () => {
+      confettiContainer.addEmitter({
+        size: { // 噴發的範圍，越小越集中，越大越發散
+          width: 25,
+          height: 15
+        },
+        startCount: 2, // 起始數量
+        rate: {
+          delay: 0,
+          quantity: 10 // 粒子組數量，startCount 為一組
+        },
+        life: {
+          duration: 0.1, // 噴發的時間長度
+          count: 7 // 發射器的數量
+        }
+      });
+    });
+
+</script>
 </body>
 </html>
