@@ -687,6 +687,15 @@ ol{
       background-color: #fff4da;
       // border-bottom: 1px dashed rgba(235,105,51,0.5);
     }
+    a{
+      color:#eb6933;
+      text-decoration: none;
+      border-bottom: 1px dashed #eb6933;
+      transition: background-color 0.3s;
+      &:hover{
+        background-color: #fff4da;
+      }
+    }
   }
   .app-download{
     .pb-6{
