@@ -288,11 +288,21 @@ ul{
     background-position: top center;
   }
 }
-
+.title-position{
+  margin: 0 auto;
+  // padding: 0 1em;
+  max-width: 560px;
+  width: 100%;
+  transform: translateY(45px);
+  img{
+    width: 100%;
+  }
+}
 .event-1{
   position: relative;
   margin: 0 auto;
   max-width: 1480px;
+  
 
   > figure{
     position: absolute;
@@ -302,6 +312,10 @@ ul{
     padding: 0;
     width: 100%;
     text-align: center;
+    &.tr{
+      padding: 0 1em;
+      transform: translateY(20px);
+    }
 
     img{
       max-width: 567px;
@@ -701,9 +715,15 @@ ol{
     .pb-6{
       padding-bottom: 18vw;
     }
+    .title-position{
+      transform: translateY(30px);
+      &.title-position{
+        padding: 0 1em;
+      }
+    }
     ul{
       &.app-download-banner{
-        padding: 6vw;
+        padding: 10vw 6vw 6vw 6vw;
         min-height: 40vw;
         border-radius: 5vw;
       }
@@ -714,6 +734,9 @@ ol{
     
     > figure {
       top: -14vw;
+      &.tr{
+        transform: translateY(20px);
+      }
     }
   }
   .white-board{
@@ -922,9 +945,12 @@ ol{
     .pb-6{
       padding-bottom: 6em;
     }
+    .title-position{
+      transform: translateY(45px);
+    }
     ul{
       &.app-download-banner{
-        padding: 2em;
+        padding: 11vw 6vw 6vw 6vw;
         min-height: 300px;
         border-radius: 2.5em;
       }
@@ -997,6 +1023,7 @@ ol{
     > figure{
       margin: 0;
       padding: 0;
+      
 
       img{
         max-width: 56px;
@@ -1064,6 +1091,21 @@ ol{
   .field-item{
     margin: 1.5em 1em;
     max-width: calc(50% - 2em);
+  }
+  .app-download{
+    // .pb-6{
+    //   padding-bottom: 6em;
+    // }
+    .title-position{
+      transform: translateY(45px);
+    }
+    ul{
+      &.app-download-banner{
+        padding: 5vw 6vw 4vw;
+        min-height: 300px;
+        border-radius: 2.5em;
+      }
+    }
   }
   .booking{
     grid-template-columns: 11em 1fr;

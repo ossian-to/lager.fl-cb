@@ -1207,6 +1207,17 @@ ul.cb-download li a:hover img {
   background-position: top center;
 }
 
+.title-position {
+  margin: 0 auto;
+  max-width: 560px;
+  width: 100%;
+  -webkit-transform: translateY(45px);
+          transform: translateY(45px);
+}
+.title-position img {
+  width: 100%;
+}
+
 .event-1 {
   position: relative;
   margin: 0 auto;
@@ -1219,6 +1230,11 @@ ul.cb-download li a:hover img {
   padding: 0;
   width: 100%;
   text-align: center;
+}
+.event-1 > figure.tr {
+  padding: 0 1em;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 .event-1 > figure img {
   max-width: 567px;
@@ -1603,8 +1619,15 @@ ol.act-date {
   .app-download .pb-6 {
     padding-bottom: 18vw;
   }
+  .app-download .title-position {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  .app-download .title-position.title-position {
+    padding: 0 1em;
+  }
   .app-download ul.app-download-banner {
-    padding: 6vw;
+    padding: 10vw 6vw 6vw 6vw;
     min-height: 40vw;
     border-radius: 5vw;
   }
@@ -1613,6 +1636,10 @@ ol.act-date {
   }
   .event-1 > figure {
     top: -14vw;
+  }
+  .event-1 > figure.tr {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   .white-board {
     padding: 7.5vw 1em 2em;
@@ -1707,8 +1734,8 @@ ol.act-date {
     font-size: 4.5vw;
   }
   .booking > .form-format select,
-.booking > .form-format input[type=text],
-.booking > .form-format button {
+  .booking > .form-format input[type=text],
+  .booking > .form-format button {
     padding: 0.5em 0.25em;
     font-size: 3vw;
   }
@@ -1776,8 +1803,12 @@ ol.act-date {
   .app-download .pb-6 {
     padding-bottom: 6em;
   }
+  .app-download .title-position {
+    -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+  }
   .app-download ul.app-download-banner {
-    padding: 2em;
+    padding: 11vw 6vw 6vw 6vw;
     min-height: 300px;
     border-radius: 2.5em;
   }
@@ -1890,6 +1921,15 @@ ol.act-date {
     margin: 1.5em 1em;
     max-width: calc(50% - 2em);
   }
+  .app-download .title-position {
+    -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+  }
+  .app-download ul.app-download-banner {
+    padding: 5vw 6vw 4vw;
+    min-height: 300px;
+    border-radius: 2.5em;
+  }
   .booking {
     grid-template-columns: 11em 1fr;
   }
@@ -1897,8 +1937,8 @@ ol.act-date {
     font-size: 2.5em;
   }
   .booking > .form-format select,
-.booking > .form-format input[type=text],
-.booking > .form-format button {
+  .booking > .form-format input[type=text],
+  .booking > .form-format button {
     padding: 0.5em 0.25em;
     font-size: 1.75em;
   }
